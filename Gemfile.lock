@@ -190,6 +190,7 @@ DEPENDENCIES
   chromedriver-helper
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  nokogiri (~> 1.8)
   puma (~> 3.11)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
