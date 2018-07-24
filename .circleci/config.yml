@@ -1,0 +1,33 @@
+---
+version: 2
+jobs:
+  build:
+    working_directory: ~/twitter-scraper
+    docker:
+      - image: circleci/ruby:2.5.1
+    steps:
+      - checkout
+
+      # Restore Cached Dependencies
+      - type: cache-restore
+        name: Restore bundle cache
+        key: twitter-scraper-{{ checksum "Gemfile.lock" }}
+
+      # Bundle install dependencies
+      - run: bundle install --path vendor/bundle
+
+      # Cache Dependencies
+      - type: cache-save
+        name: Store bundle cache
+        key: twitter-scraper-{{ checksum "Gemfile.lock" }}
+        paths:
+          - vendor/bundle
+
+      # Run the tests
+      - run: bundle exec rails t
+
+      # Run the quality analysis tools
+      - run: bundle exec rubocop
+
+      # Run the quality analysis tools
+      - run: bundle exec rubycritic --mode-ci --format console app config lib test
