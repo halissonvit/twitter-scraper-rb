@@ -1,0 +1,18 @@
+AllCops:
+  TargetRubyVersion: 2.3
+
+  Include:
+    - '**/config.ru'
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'db/schema.rb'
+Rails:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
