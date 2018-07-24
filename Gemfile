@@ -44,6 +44,7 @@ group :development do
 
   # Quality analysis tools
   gem 'rubocop', require: false
+  gem 'rubycritic'
 end
 
 group :test do
