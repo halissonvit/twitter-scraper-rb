@@ -1,8 +1,6 @@
 AllCops:
   TargetRubyVersion: 2.3
 
-  Include:
-    - '**/config.ru'
   Exclude:
     - 'bin/**/*'
     - 'vendor/**/*'
@@ -16,3 +14,7 @@ Style/Documentation:
 
 Metrics/LineLength:
   Max: 120
+
+# Disabling this as the usage of Kernel#open does not receive user's params
+Security/Open:
+  Enabled: false
