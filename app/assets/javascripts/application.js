@@ -12,4 +12,19 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery3
+//= require jquery_ujs
+//= require jquery.slick
 //= require_tree .
+
+$(document).ready(function() {
+  $('.tweets').slick({
+    arrows: false,
+    autoplay: true,
+    centerMode: true,
+    cssEase: 'linear',
+    fade: true,
+    infinite: true,
+    mobileFirst: true,
+  });
+});

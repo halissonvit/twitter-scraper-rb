@@ -1,0 +1,12 @@
+<section class='content'>
+  <div class='tweets slideshow'>
+    <% @results.each do |result| %>
+    <div class='tweet'>
+      <h1 class='tweet-text dont-break-out'>&ldquo;<%= result[:content] %>&rdquo;</h1>
+      <author class='tweet-author'>
+        <%= link_to result[:author][:username], result[:author][:profile], class: 'tweet-author-profile-link' %>
+      </author>
+    </div>
+    <% end %>
+  </div>
+</section>

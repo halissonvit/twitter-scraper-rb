@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TwitterScraper</title>
+    <title>Twitter Scraper Demo APP</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <link href='https://fonts.googleapis.com/css?family=Martel:400,400italic,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,5 +14,9 @@
 
   <body>
     <%= yield %>
+
+    <footer>
+      <img class='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Major_League_Hacking_logo.svg/1200px-Major_League_Hacking_logo.svg.png' alt='https://mlh.io/' />
+    </footer>
   </body>
 </html>
