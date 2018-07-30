@@ -5,12 +5,12 @@ require_relative '../browser/simple_browser'
 TIMELINE_SELECTOR = '#timeline'
 TWEET_SELECTOR = '.tweet'
 TWEET_TEXT_SELECTOR = '.tweet-text'
+TWEET_TEXT_TIMELINE_LINK_SELECTOR = '.twitter-timeline-link'
 TWEET_AUTHOR_SELECTOR = '.account-group'
 TWEET_AUTHOR_FULL_NAME_SELECTOR = '.fullname'
 TWEET_AUTHOR_USERNAME_SELECTOR = '.username'
 TWEET_CREATED_AT_SELECTOR = '.tweet-timestamp ._timestamp'
 TWEET_CREATED_AT_ATTRIBUTE = 'data-time-ms'
-
 module Scraper
   # Simple scraper that analyzes twitter's search page to extract tweets for a
   # given term
@@ -48,7 +48,7 @@ module Scraper
 
     def find_text(tweet)
       text_node = tweet.css(TWEET_TEXT_SELECTOR)
-      text_node.css('.twitter-timeline-link').each(&:remove)
+      text_node.css(TWEET_TEXT_TIMELINE_LINK_SELECTOR).each(&:remove)
       text_node.text
     end
 
