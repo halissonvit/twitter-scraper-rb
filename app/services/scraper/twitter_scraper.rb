@@ -40,21 +40,25 @@ module Scraper
 
     def parse_tweet(tweet)
       {
-        content: find_text(tweet),
         author: find_author(tweet),
+        content: find_text(tweet),
         created_at: find_created_at(tweet)
       }
     end
 
     def find_text(tweet)
-      tweet.css(TWEET_TEXT_SELECTOR).text
+      text_node = tweet.css(TWEET_TEXT_SELECTOR)
+      text_node.css('.twitter-timeline-link').each(&:remove)
+      text_node.text
     end
 
     def find_author(tweet)
       user_info = tweet.css(TWEET_AUTHOR_SELECTOR)
+      username = user_info.css(TWEET_AUTHOR_USERNAME_SELECTOR).text
       {
         full_name: user_info.css(TWEET_AUTHOR_FULL_NAME_SELECTOR).text,
-        username: user_info.css(TWEET_AUTHOR_USERNAME_SELECTOR).text
+        profile: "https://twitter.com/#{username}",
+        username: username
       }
     end
 
