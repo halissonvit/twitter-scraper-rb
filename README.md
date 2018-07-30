@@ -8,9 +8,13 @@ A sample web application that scrapes Twitter for tweets about MLH Localhost and
 
 * [Ruby 2.5.1](https://www.ruby-lang.org/en/) - A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
 
-* [Ruby on Rails 5.2.0](https://rubyonrails.org/) - Rails is a web application development framework written in the Ruby programming language. It is designed to make programming web applications easier by making assumptions about what every developer needs to get started. 
+* [Ruby on Rails 5.2.0](https://rubyonrails.org/) - Rails is a web application development framework written in the Ruby programming language. It is designed to make programming web applications easier by making assumptions about what every developer needs to get started.
 
 * [Nokogiri](https://www.nokogiri.org/) - Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser. Among Nokogiri's many features is the ability to search documents via XPath or CSS3 selectors.
+
+* [jquery-rails](https://github.com/rails/jquery-rails) - A gem to automate using jQuery with Rails
+
+* [jquery-slick-rails](https://github.com/bodrovis/jquery-slick-rails) - Integrates Slick carousel, a jQuery plugin, into your Rails app.
 
 * [Rubocop](http://batsov.com/rubocop/) - RuboCop is a Ruby static code analyzer. Out of the box it will enforce many of the guidelines outlined in the community Ruby Style Guide.
 

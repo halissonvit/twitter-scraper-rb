@@ -60,6 +60,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'nokogiri', '~> 1.8'
 
-gem "jquery-rails", "~> 4.3"
+gem 'jquery-rails', '~> 4.3'
 
-gem "jquery-slick-rails", "~> 1.9"
+gem 'jquery-slick-rails', '~> 1.9'
